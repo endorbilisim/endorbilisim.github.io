@@ -65,7 +65,10 @@
     </div>
 
     <!-- Navigation Header -->
-    <header class="relative z-10 border-b border-slate-800/80 bg-slate-950/75 backdrop-blur-md sticky top-0">
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-lg transition-transform duration-300 ease-in-out shadow-lg shadow-black/20"
+    >
       <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="https://endorbilisim.github.io/" class="flex items-center gap-3 group">
           <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform duration-200">
@@ -89,7 +92,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="relative z-10 flex-1 max-w-6xl mx-auto px-6 py-12 sm:py-16 w-full space-y-16 sm:space-y-20">
+    <main class="relative z-10 flex-1 max-w-6xl mx-auto px-6 pt-28 sm:pt-32 pb-16 w-full space-y-16 sm:space-y-20">
       
       <!-- Hero Section -->
       <section class="text-center max-w-3xl mx-auto space-y-6 pt-4">
@@ -369,5 +372,42 @@
         </p>
       </div>
     </footer>
+
+    <!-- Header Smart Scroll Behavior (Hide on scroll down, show on scroll up) -->
+    <script>
+      (function () {
+        const header = document.getElementById("site-header");
+        if (!header) return;
+
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHeader() {
+          const currentScrollY = window.scrollY;
+
+          // If scrolled down more than 80px and scrolling downwards -> hide header
+          if (currentScrollY > 80 && currentScrollY > lastScrollY) {
+            header.classList.add("-translate-y-full");
+          } else {
+            // Scrolling upwards or near the top -> show header
+            header.classList.remove("-translate-y-full");
+          }
+
+          lastScrollY = Math.max(0, currentScrollY);
+          ticking = false;
+        }
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!ticking) {
+              window.requestAnimationFrame(updateHeader);
+              ticking = true;
+            }
+          },
+          { passive: true }
+        );
+      })();
+    </script>
   </body>
 </html>
