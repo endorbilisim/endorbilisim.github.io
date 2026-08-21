@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endor Bilişim &ndash; Mobile Games &amp; Apps Studio</title>
+    <meta
+      name="description"
+      content="Official developer website and gaming hub for Endor Bilişim. Discover Quote Trivia, Wordletter Unlimited, and our mobile applications."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://endorbilisim.github.io/" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["'Plus Jakarta Sans'", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#f0f4ff",
+                100: "#e0eaff",
+                200: "#c7d7fe",
+                300: "#a4bcfe",
+                400: "#7d97fc",
+                500: "#5770f8",
+                600: "#3b4fe8",
+                700: "#2d3cc8",
+                800: "#2632a0",
+                900: "#1a225e",
+                950: "#0e1338",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .mesh-bg {
+        background: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+                    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                    radial-gradient(at 50% 100%, rgba(59, 130, 246, 0.06) 0px, transparent 50%);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+    <!-- Background Glows -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-brand-600/25 to-indigo-500/20 blur-[130px] rounded-full"></div>
+      <div class="absolute top-96 -left-20 w-96 h-96 bg-emerald-500/10 blur-[120px] rounded-full"></div>
+      <div class="absolute top-[600px] -right-20 w-96 h-96 bg-violet-600/15 blur-[120px] rounded-full"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="relative z-10 border-b border-slate-800/80 bg-slate-950/75 backdrop-blur-md sticky top-0">
+      <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="https://endorbilisim.github.io/" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-brand-500/25 group-hover:scale-105 transition-transform duration-200">
+            E
+          </div>
+          <div>
+            <span class="text-lg font-bold tracking-tight text-white group-hover:text-brand-300 transition-colors">Endor Bilişim</span>
+            <span class="block text-[11px] text-slate-400 font-medium">Game Studio &amp; Mobile Apps</span>
+          </div>
+        </a>
+
+        <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium">
+          <a href="#games" class="text-slate-300 hover:text-white transition-colors">Games</a>
+          <a href="#about" class="text-slate-300 hover:text-white transition-colors">About</a>
+          <a href="app-ads.txt" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/70 border border-slate-700/60 text-xs text-slate-300 hover:text-white hover:border-slate-600 transition-colors">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            app-ads.txt
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex-1 max-w-6xl mx-auto px-6 py-12 sm:py-16 w-full space-y-16 sm:space-y-20">
+      
+      <!-- Hero Section -->
+      <section class="text-center max-w-3xl mx-auto space-y-6 pt-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-semibold text-brand-300 shadow-inner">
+          <span class="w-2 h-2 rounded-full bg-brand-400"></span>
+          Official Mobile Developer Hub
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Crafting Fun &amp; Engaging <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-indigo-300 to-emerald-400">Mobile Games</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
+          Welcome to the official developer showcase of <strong>Endor Bilişim</strong>. Explore our published mobile games on Google Play, read legal documentation, and get in touch with our team.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a
+            href="#games"
+            class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold shadow-lg shadow-brand-600/30 hover:shadow-brand-600/40 hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Explore Our Games
+          </a>
+          <a
+            href="#about"
+            class="px-6 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 font-semibold hover:-translate-y-0.5 transition-all duration-200"
+          >
+            Developer Information
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Games Section -->
+      <section id="games" class="space-y-8 scroll-mt-24">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800/80 pb-4">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Our Published Games</h2>
+            <p class="text-sm text-slate-400 mt-1">Available now on the Google Play Store</p>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-800">
+            2 Games Available
+          </span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <!-- Card 1: Quote Trivia -->
+          <article class="group relative bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-indigo-500/50 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none"></div>
+
+            <div class="space-y-5 relative z-10">
+              <!-- Game Icon & Badges -->
+              <div class="flex items-start justify-between gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 p-0.5 shadow-lg shadow-indigo-600/30 flex items-center justify-center flex-shrink-0 overflow-hidden relative">
+                  <img src="quote-trivia-icon.png" alt="Quote Trivia Logo" class="w-full h-full object-cover rounded-2xl hidden" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" />
+                  <div class="w-full h-full bg-slate-950/60 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-950/80 text-indigo-300 border border-indigo-700/40">
+                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                  Trivia &amp; Quiz
+                </span>
+              </div>
+
+              <!-- Game Info -->
+              <div>
+                <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                  Quote Trivia
+                </h3>
+                <p class="text-xs text-slate-400 mt-1 font-mono">com.endorgames.quote_trivia</p>
+                <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+                  Test your knowledge with thousands of famous quotes from history, literature, cinema, and philosophy. Challenge opponents in PvP duels and climb weekly leaderboards.
+                </p>
+              </div>
+
+              <!-- Feature Tags -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">Daily Quests</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">PvP Duels</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">Global Ranking</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 relative z-10">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.endorgames.quote_trivia"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-indigo-50 shadow-md hover:shadow-lg transition-all"
+              >
+                <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.914V2.728c.174-.367.39-.684.609-.914zm11.233 11.233L17.7 15.9l-11.8 6.814 8.942-9.667zm0-2.094L5.9 1.286 17.7 8.1 14.842 10.953zm1.48 1.48l3.69-2.13a1.99 1.99 0 0 1 0 3.454l-3.69 2.13-1.48-1.48 1.48-1.974z"/>
+                </svg>
+                <span>GET ON GOOGLE PLAY</span>
+              </a>
+
+              <a
+                href="https://quote-trivia.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center justify-center sm:justify-start gap-1 py-1"
+              >
+                <span>Hub &amp; Legal Docs</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Wordletter Unlimited -->
+          <article class="group relative bg-slate-900/80 hover:bg-slate-900 border border-slate-800/90 hover:border-emerald-500/50 rounded-3xl p-7 sm:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl pointer-events-none"></div>
+
+            <div class="space-y-5 relative z-10">
+              <!-- Game Icon & Badges -->
+              <div class="flex items-start justify-between gap-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-0.5 shadow-lg shadow-emerald-500/30 flex items-center justify-center flex-shrink-0 overflow-hidden relative">
+                  <img src="wordletter-icon.png" alt="Wordletter Logo" class="w-full h-full object-cover rounded-2xl hidden" onload="this.classList.remove('hidden'); if(this.nextElementSibling) this.nextElementSibling.classList.add('hidden');" />
+                  <div class="w-full h-full bg-slate-950/60 rounded-2xl flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-emerald-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/40">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Word &amp; Puzzle
+                </span>
+              </div>
+
+              <!-- Game Info -->
+              <div>
+                <h3 class="text-2xl font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  Wordletter Unlimited
+                </h3>
+                <p class="text-xs text-slate-400 mt-1 font-mono">com.endor.wordletter_unlimited</p>
+                <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+                  Enjoy unlimited daily word puzzles and expand your vocabulary without artificial wait times. Clean, minimalist design engineered for puzzle lovers.
+                </p>
+              </div>
+
+              <!-- Feature Tags -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">Unlimited Words</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">Offline Play</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-[11px] font-medium text-slate-300 border border-slate-700/50">Statistics</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-6 mt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 relative z-10">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.endor.wordletter_unlimited"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-white text-slate-950 font-bold text-xs hover:bg-emerald-50 shadow-md hover:shadow-lg transition-all"
+              >
+                <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a1.996 1.996 0 0 1-.61-.914V2.728c.174-.367.39-.684.609-.914zm11.233 11.233L17.7 15.9l-11.8 6.814 8.942-9.667zm0-2.094L5.9 1.286 17.7 8.1 14.842 10.953zm1.48 1.48l3.69-2.13a1.99 1.99 0 0 1 0 3.454l-3.69 2.13-1.48-1.48 1.48-1.974z"/>
+                </svg>
+                <span>GET ON GOOGLE PLAY</span>
+              </a>
+
+              <a
+                href="https://wordletter-unlimited.github.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center justify-center sm:justify-start gap-1 py-1"
+              >
+                <span>Hub &amp; Legal Docs</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Publisher Verification & app-ads.txt Notice -->
+      <section class="bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950/70 border border-slate-800 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-1.5 max-w-xl">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            <h3 class="text-base font-bold text-white">Google AdMob &amp; Authorized Digital Sellers</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            This domain hosts the official <code class="text-brand-300 bg-slate-800 px-1.5 py-0.5 rounded font-mono text-xs">app-ads.txt</code> file for Endor Bilişim mobile applications, ensuring ad fraud prevention and IAB transparency compliance.
+          </p>
+        </div>
+
+        <a
+          href="app-ads.txt"
+          target="_blank"
+          class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 hover:text-white transition-colors flex-shrink-0"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>View app-ads.txt</span>
+        </a>
+      </section>
+
+      <!-- About & Contact Section -->
+      <section id="about" class="grid md:grid-cols-2 gap-8 scroll-mt-24">
+        <!-- Developer Profile -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-7 space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            About Endor Bilişim
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Endor Bilişim is an independent mobile application and game development studio based in Istanbul, Turkey. We focus on building high-quality, lightweight, and engaging mobile entertainment experiences for players worldwide.
+          </p>
+          <div class="text-xs text-slate-400 space-y-1 pt-2 border-t border-slate-800/80">
+            <p><strong>Entity:</strong> Endor Bilişim &ndash; Mustafa Burak Acarkan</p>
+            <p><strong>Location:</strong> Esentepe Mah. Talatpaşa Cad. No: 5 / 1, 34394 Şişli / İstanbul / Türkiye</p>
+          </div>
+        </div>
+
+        <!-- Contact & Support -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-7 space-y-4">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Contact &amp; Support
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Have questions, feedback, or business inquiries about our games? Feel free to reach out to our support team:
+          </p>
+          <div class="space-y-2 pt-2 border-t border-slate-800/80 text-sm">
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-400 font-semibold w-16">Email:</span>
+              <a href="mailto:info@endorbilisim.com" class="text-brand-400 hover:text-brand-300 hover:underline font-medium">
+                info@endorbilisim.com
+              </a>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-slate-400 font-semibold w-16">Phone:</span>
+              <a href="tel:+902129454298" class="text-slate-300 hover:text-white font-medium">
+                +90 212 945 42 98
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950 py-10 text-center text-xs text-slate-400">
+      <div class="max-w-6xl mx-auto px-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-medium text-slate-300">
+          <a href="https://quote-trivia.github.io" class="hover:text-white transition-colors">Quote Trivia Hub</a>
+          <span>&bull;</span>
+          <a href="https://wordletter-unlimited.github.io" class="hover:text-white transition-colors">Wordletter Unlimited Hub</a>
+          <span>&bull;</span>
+          <a href="app-ads.txt" class="hover:text-white transition-colors">app-ads.txt</a>
+          <span>&bull;</span>
+          <a href="mailto:info@endorbilisim.com" class="hover:text-white transition-colors">info@endorbilisim.com</a>
+        </div>
+
+        <p class="text-slate-400 text-[11px]">
+          &copy; <script>document.write(new Date().getFullYear());</script> Endor Bilişim &ndash; Mustafa Burak Acarkan. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
